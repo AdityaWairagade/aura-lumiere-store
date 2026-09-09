@@ -23,8 +23,6 @@ import NotFoundPage from './pages/NotFoundPage';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminProducts from './pages/admin/AdminProducts';
 import AdminProductEdit from './pages/admin/AdminProductEdit';
-import AdminOrders from './pages/admin/AdminOrders';
-import AdminUsers from './pages/admin/AdminUsers';
 
 function App() {
   return (
@@ -59,8 +57,7 @@ function App() {
           <Route path="products" element={<AdminProducts />} />
           <Route path="products/new" element={<AdminProductEdit />} />
           <Route path="products/:id/edit" element={<AdminProductEdit />} />
-          <Route path="orders" element={<AdminOrders />} />
-          <Route path="users" element={<AdminUsers />} />
+        
         </Route>
       </Route>
     </Routes>
