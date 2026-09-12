@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-noir font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3
+           bg-noir text-champagne font-sans font-medium text-sm
+           tracking-widest uppercase border border-noir
+           transition-all duration-300
+           hover:bg-transparent hover:text-noir
+           focus:outline-none focus:ring-2 focus:ring-gold-500 focus:ring-offset-2;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3
+           bg-gold-500 text-noir font-sans font-medium text-sm
+           tracking-widest uppercase border border-gold-500
+           transition-all duration-300
+           hover:bg-gold-600 hover:border-gold-600
+           focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3
+           bg-transparent text-noir font-sans font-medium text-sm
+           tracking-widest uppercase border border-noir
+           transition-all duration-300
+           hover:bg-noir hover:text-champagne
+           focus:outline-none focus:ring-2 focus:ring-noir focus:ring-offset-2;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-serif font-light tracking-luxury text-center mb-2;
+  }
+
+  .section-subtitle {
+    @apply text-sm font-sans tracking-widest uppercase text-gold-600 text-center mb-8;
+  }
+
+  .gold-divider {
+    @apply w-16 h-px bg-gold-500 mx-auto my-4;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-white border border-gray-200
+           font-sans text-sm text-noir placeholder-gray-400
+           focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500
+           transition-colors duration-200;
+  }
+
+  .card-hover {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+}
+
+/* Swiper custom styles */
+.swiper-pagination-bullet {
+  background: #d4960f !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #d4960f !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #faf6f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4960f;
+  border-radius: 3px;
+}
